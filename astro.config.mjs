@@ -10,6 +10,10 @@ import sitemap from '@astrojs/sitemap';
 // host and makes every page look like a duplicate of a different origin.
 export default defineConfig({
   site: 'https://beadhive.ai',
+  // Astro's HTML minifier drops the newline+indent before an inline tag that
+  // starts a source line ("on the\n  <a>" -> "on the<a>"), gluing links and
+  // <code> to the preceding word on every page. Keep source whitespace intact.
+  compressHTML: false,
   integrations: [
     // Emits sitemap-index.xml + sitemap-0.xml from `site` above. `filter` drops
     // /llms.txt: it is a machine-readable index for agents, not a page for

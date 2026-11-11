@@ -863,8 +863,8 @@
     :root:not([data-fx-gates="off"]) .gatehex:nth-of-type(3n) { animation-delay: -4.8s; }
   }
   @keyframes gate-breathe {
-    0%, 100% { stroke-width: 1.6; fill: var(--honey-wash); filter: none; }
-    50% { stroke-width: 2.4; fill: color-mix(in srgb, var(--honey) 28%, var(--honey-wash));
+    0%, 100% { stroke-width: 1.6; filter: none; }
+    50% { stroke-width: 2.4;
           filter: drop-shadow(0 0 5px color-mix(in srgb, var(--honey) 60%, transparent)); }
   }
 
